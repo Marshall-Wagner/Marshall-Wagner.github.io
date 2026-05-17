@@ -47,7 +47,7 @@
             <div class="skills-grid">
                 <div class="skill-card">
                     <h3>Systems</h3>
-                    <p>Ubuntu Server, Windows, macOS</p>
+                    <p>Linux (Ubuntu Server, Manjaro, Mint, Bodhi), Windows 10/11 Enterprise + IoT LTSC</p>
                 </div>
                 <div class="skill-card">
                     <h3>Networking</h3>
@@ -139,20 +139,21 @@
                     <li>Configured Quectel RM520N-GLAA industrial 5G M.2 modem via AT commands as the primary WAN uplink for the facility.</li>
                     <li>Configured per-port broadcast storm control and L2 hardening on the managed switch: DHCP snooping, IGMP snooping, and loop detection.</li>
                     <li>Configured wireless APs with WPA3-SAE authentication (WPA2 Personal fallback for legacy clients) and 20-character LUDS passphrases (lower/upper/digits/symbols) to resist brute-force and offline-dictionary attacks.</li>
-                    <li>Built site-to-site Wireguard VPN tunneling between on-prem network and cloud VPS with static IPv4 routing.</li>
-                    <li>Deployed OpenVPN Access Server alongside Wireguard for LDAP-integrated remote user authentication.</li>
+                    <li>Built point-to-site Wireguard VPN on-prem for secure employee remote access to LAN services; VPN client DNS routed through AdGuard Home.</li>
+                    <li>Migrated Wireguard server from cloud VPS relay (interim workaround for CGNAT-blocked P2P traversal) to direct on-prem after provisioning static IPv4 from the carrier — eliminated the relay hop.</li>
+                    <li>Deployed OpenVPN Access Server on-prem alongside Wireguard for LDAP-integrated remote user authentication.</li>
                     <li>Configured AdGuard Home as a VPN-attached DNS resolver: network-wide ad/tracker/malware blocking, DNSSEC validation, and encrypted upstream DNS (DoH/DoT).</li>
                 </ul>
 
                 <h4 class="job-group">Server Administration</h4>
                 <ul>
-                    <li>Maintain Ubuntu Server stack: DNS resolver, SSL certificates, RocketChat, internal media server.</li>
+                    <li>Maintain Ubuntu 24.04 LTS server stack under Ubuntu Pro (ESM + Livepatch for kernel CVE patching without reboot): DNS resolver, SSL certificates, RocketChat, internal media server.</li>
                     <li>Manage firewall policy, domain blacklisting/whitelisting, and endpoint protection across all org devices.</li>
                 </ul>
 
                 <h4 class="job-group">Support &amp; Hardware</h4>
                 <ul>
-                    <li>Provide tier 1&ndash;2 support, troubleshoot hardware/network issues, and deploy self-hosted RustDesk (open-source, Rust-based) for remote computer access and file transfer &mdash; replacing third-party SaaS (TeamViewer/AnyDesk) with an organization-controlled alternative.</li>
+                    <li>Self-hosted RustDesk relay + ID servers (hbbr/hbbs) on Ubuntu 24.04 LTS &mdash; Windows and Linux peer endpoints connect via the internal relay (replaces TeamViewer/AnyDesk SaaS); the Linux peer runs X.org since Wayland&rsquo;s per-session screen-capture authorization breaks unattended capture.</li>
                     <li>Configured Windows-based print server with USB-attached Brother printer for organizational printing; selected after evaluating CUPS on Linux, where vendor driver support for the Brother hardware was insufficient.</li>
                     <li>Migrated facility AV from Dish Network satellite to terrestrial ATSC 1.0/3.0 over-the-air reception: replaced antennas, deployed RG6 coaxial distribution to 5 TV endpoints &mdash; eliminated ~$1,320/year in subscription and rebroadcast fees while doubling coverage.</li>
                     <li>Build custom workstations, image OS deployments, manage driver and thermal lifecycle.</li>
@@ -202,15 +203,19 @@
             <div class="projects-grid">
                 <div class="project-card">
                     <h3>Enterprise Network Overhaul</h3>
-                    <p>Designed and built company network from scratch: Cat8/Cat6A S/FTP backbone, managed 2.5 Gbps switch with 10 Gbps uplink, OpenWRT edge router on PC hardware with primary 5G WAN, and site-to-site Wireguard VPN.</p>
+                    <p>Designed and built company network from scratch: Cat8/Cat6A S/FTP backbone, managed 2.5 Gbps switch with 10 Gbps uplink, OpenWRT edge router on PC hardware with primary 5G WAN, and on-prem point-to-site Wireguard VPN for employee remote LAN access.</p>
                 </div>
                 <div class="project-card">
-                    <h3>Security Hardening</h3>
-                    <p>Deployed endpoint protection, firewall policy, and domain filtering across all organizational endpoints.</p>
+                    <h3>Defense-in-Depth Security Hardening &mdash; L2 to Endpoint</h3>
+                    <p>Layered controls across the org network: L2 switch hardening (DHCP snooping, IGMP snooping, loop detection, per-port broadcast storm control); WPA3-SAE wireless with 20-character LUDS passphrases; AdGuard Home VPN-attached DNS resolver (DNSSEC + DoH/DoT + ad/tracker/malware filtering); Windows 10/11 Enterprise + IoT LTSC for reduced attack surface; Ubuntu Pro (ESM + Livepatch) on the Linux server; firewall policy + domain blacklisting/whitelisting across all endpoints.</p>
                 </div>
                 <div class="project-card">
                     <h3>Self-Hosted Password Vault &mdash; Vaultwarden</h3>
                     <p>Deployed Vaultwarden for organizational credential management; hardened Docker container behind Caddy reverse proxy with auto Let&rsquo;s Encrypt TLS, HTTP security headers, and rate limiting. Cybersecurity coursework focus: Argon2id hashing, password salting, and secure database storage techniques applied in production.</p>
+                </div>
+                <div class="project-card">
+                    <h3>Facility AV Broadcast Migration &mdash; Satellite to Terrestrial ATSC</h3>
+                    <p>Migrated facility AV from Dish Network satellite to terrestrial ATSC 1.0/3.0 OTA reception. Outdoor VHF/UHF antenna feeds an Antronix powered splitter (built-in amplification, high-pass filter rejecting sub-TV-band noise, multi-port distribution to 5 endpoints). Replaced legacy RG59 with quad-shielded RG6 (solid copper core) &mdash; quad shielding rejects EMI/RFI from manufacturing equipment, solid copper preserves DC pass-through powering the splitter via coax. Doubled coverage from 2 to 5 TVs while eliminating ~$1,320/year in subscription + rebroadcast fees.</p>
                 </div>
                 <div class="project-card">
                     <h3>Media Workflow Optimization</h3>
