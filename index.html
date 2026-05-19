@@ -153,14 +153,14 @@
                     <li>Configured wireless APs with WPA3-SAE authentication (WPA2 Personal fallback for legacy clients) and 20-character LUDS passphrases (lower/upper/digits/symbols) to resist brute-force and offline-dictionary attacks.</li>
                     <li>Built point-to-site Wireguard VPN on-prem for secure employee remote access to LAN services; VPN client DNS routed through AdGuard Home.</li>
                     <li>Migrated Wireguard server from cloud VPS relay (interim workaround for CGNAT-blocked P2P traversal) to direct on-prem after provisioning static IPv4 from the carrier — eliminated the relay hop.</li>
-                    <li>Deployed OpenVPN Access Server on-prem alongside Wireguard for LDAP-integrated remote user authentication.</li>
+                    <li>Deployed OpenVPN Access Server on-prem alongside Wireguard as a fallback remote-access VPN (LDAP/AD integration available).</li>
                     <li>Configured AdGuard Home as a VPN-attached DNS resolver: network-wide ad/tracker/malware blocking, DNSSEC validation, and encrypted upstream DNS (DoH/DoT).</li>
                     <li>UPS battery backup on 5G modem, edge router, managed switch, and on-prem server — maintains network, VPN, and DNS availability through power flickers and brownouts.</li>
                 </ul>
 
                 <h4 class="job-group">Server Administration</h4>
                 <ul>
-                    <li>Maintain Ubuntu 24.04 LTS server stack under Ubuntu Pro (ESM + Livepatch for kernel CVE patching without reboot): DNS resolver, SSL certificates, RocketChat, internal media server.</li>
+                    <li>Maintain Ubuntu 24.04 LTS server stack under Ubuntu Pro (ESM + Livepatch for kernel CVE patching without reboot): DNS resolver, SSL certificates, RocketChat, Grafana + Prometheus monitoring (UFW-restricted to Wireguard VPN clients for server/network observability and DoS/DDoS detection), internal media server.</li>
                     <li>Manage firewall policy, domain blacklisting/whitelisting, and endpoint protection across all org devices.</li>
                 </ul>
 
