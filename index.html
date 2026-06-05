@@ -173,6 +173,7 @@
                     <li>Configured per-port broadcast storm control and Layer 2 hardening on the managed switch: DHCP snooping, IGMP snooping, and loop detection.</li>
                     <li>Monitor router and managed switch interfaces for unauthorized devices; block unauthorized clients via MAC address filtering.</li>
                     <li>Configured wireless APs with WPA3-SAE authentication (WPA2 Personal fallback for legacy clients) and 20-character LUDS passphrases (lower/upper/digits/symbols) to resist brute-force and offline-dictionary attacks.</li>
+                    <li>Tuned the 2.4 GHz wireless network for reliable long-range connectivity to distant WPA2-only IoT cameras (incompatible with 5 GHz and WPA3-SAE): capped modulation at MCS 7 (802.11n), 20 MHz channel width, optimized channel selection, and maximum TX power &mdash; trading peak throughput for range and link stability (1024-QAM/MCS 11 dropped at range; the MCS 7 cap held).</li>
                     <li>Built point-to-site Wireguard VPN on-prem for secure employee remote access to LAN services; VPN client DNS routed through AdGuard Home.</li>
                     <li>Migrated Wireguard server from cloud VPS relay (interim workaround for CGNAT-blocked P2P traversal) to direct on-prem after provisioning static IPv4 from the carrier — eliminated the relay hop.</li>
                     <li>Deployed OpenVPN Access Server on-prem alongside Wireguard as a fallback remote-access VPN (LDAP/AD integration available).</li>
