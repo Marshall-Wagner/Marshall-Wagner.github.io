@@ -171,6 +171,7 @@
                     <li>Designed and deployed enterprise network: OpenWRT edge router on PC hardware (Intel X540 10 Gbps NIC), managed 2.5 Gbps switch with 10 Gbps uplink, wireless APs including inter-building bridge, and UL-listed Cat8/Cat6A S/FTP shielded backbone (T568B termination) for EMI/RFI rejection.</li>
                     <li>Configured Quectel RM520N-GLAA industrial 5G M.2 modem via AT commands as the primary WAN uplink for the facility; modem connected to the router via M.2-to-USB-A adapter board (USB 3.0 / 5 Gbps) for flexible physical placement, inheriting the router's UPS power domain.</li>
                     <li>Configured per-port broadcast storm control and L2 hardening on the managed switch: DHCP snooping, IGMP snooping, and loop detection.</li>
+                    <li>Monitor router and managed switch interfaces for unauthorized devices; block unauthorized clients via MAC address filtering.</li>
                     <li>Configured wireless APs with WPA3-SAE authentication (WPA2 Personal fallback for legacy clients) and 20-character LUDS passphrases (lower/upper/digits/symbols) to resist brute-force and offline-dictionary attacks.</li>
                     <li>Built point-to-site Wireguard VPN on-prem for secure employee remote access to LAN services; VPN client DNS routed through AdGuard Home.</li>
                     <li>Migrated Wireguard server from cloud VPS relay (interim workaround for CGNAT-blocked P2P traversal) to direct on-prem after provisioning static IPv4 from the carrier — eliminated the relay hop.</li>
