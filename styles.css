@@ -108,6 +108,15 @@ body {
     fill: currentColor;
 }
 
+.email-btn {
+    background: var(--primary);
+    margin-left: 0.75rem;
+}
+
+.email-btn:hover {
+    background: #152a63;
+}
+
 /* Navbar */
 .navbar {
     background: var(--card);
