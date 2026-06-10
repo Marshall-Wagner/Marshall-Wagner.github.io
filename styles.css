@@ -117,6 +117,15 @@ body {
     background: #152a63;
 }
 
+.credly-btn {
+    background: #e8730c;
+    margin-left: 0.75rem;
+}
+
+.credly-btn:hover {
+    background: #c45f08;
+}
+
 /* Navbar */
 .navbar {
     background: var(--card);
