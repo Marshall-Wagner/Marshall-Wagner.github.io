@@ -188,7 +188,7 @@
                     <li>Migrated Wireguard server from cloud VPS relay (interim workaround for CGNAT-blocked P2P traversal) to direct on-prem after provisioning static IPv4 from the carrier - eliminated the relay hop.</li>
                     <li>Deployed OpenVPN Access Server on-prem alongside Wireguard as a fallback remote-access VPN (LDAP/AD integration available).</li>
                     <li>Configured AdGuard Home as a VPN-attached DNS resolver: network-wide ad/tracker/malware blocking, DNSSEC validation, and encrypted upstream DNS (DoH/DoT).</li>
-                    <li>UPS battery backup on 5G modem, edge router, managed switch, and on-prem server - maintains network, VPN, and DNS availability through power flickers and brownouts.</li>
+                    <li>UPS with automatic voltage regulation (AVR) and EMI/RFI line filtering on the 5G modem, edge router, managed switch, and on-prem server - conditions power and maintains network, VPN, and DNS availability through power flickers and brownouts.</li>
                 </ul>
 
                 <h4 class="job-group">Server Administration</h4>
@@ -254,7 +254,7 @@
             <div class="projects-grid">
                 <div class="project-card">
                     <h3>Enterprise Network Overhaul</h3>
-                    <p>Designed and built company network from scratch: Cat8/Cat6A S/FTP backbone, managed 2.5 Gbps switch with 10 Gbps uplink, OpenWRT edge router on PC hardware with primary 5G WAN, and on-prem point-to-site Wireguard VPN for employee remote LAN access. UPS battery backup on 5G modem, edge router, managed switch, and on-prem server to maintain availability through power flickers and brownouts.</p>
+                    <p>Designed and built company network from scratch: Cat8/Cat6A S/FTP backbone, managed 2.5 Gbps switch with 10 Gbps uplink, OpenWRT edge router on PC hardware with primary 5G WAN, and on-prem point-to-site Wireguard VPN for employee remote LAN access. UPS with AVR and EMI/RFI line filtering on the 5G modem, edge router, managed switch, and on-prem server to condition power and maintain availability through power flickers and brownouts.</p>
                 </div>
                 <div class="project-card">
                     <h3>Defense-in-Depth Security Hardening - Layer 2 to Endpoint</h3>
