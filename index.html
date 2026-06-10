@@ -187,7 +187,9 @@
 
                 <h4 class="job-group">Server Administration</h4>
                 <ul>
-                    <li>Maintain Ubuntu 24.04 LTS server stack under Ubuntu Pro (ESM + Livepatch for kernel CVE patching without reboot): DNS resolver, SSL certificates, Caddy reverse proxy with auto Let's Encrypt HTTPS/TLS, RocketChat, Zammad self-hosted IT help desk ticketing system, syslog/journald log review + Grafana + Prometheus metrics monitoring (UFW-restricted to Wireguard VPN clients) - combined reactive and proactive observability matching the Azure Monitor + Sentinel pattern, Immich photo server (Wireguard VPN-restricted), Jellyfin video streaming server.</li>
+                    <li>Maintain an Ubuntu 24.04 LTS server stack under Ubuntu Pro (ESM + Livepatch for kernel patching without reboot): DNS resolver, SSL certificates, and a Caddy reverse proxy with auto Let's Encrypt TLS.</li>
+                    <li>Self-host org services on the stack: RocketChat (team chat), Zammad (help desk ticketing), Immich (photos, VPN-restricted), and Jellyfin (media streaming).</li>
+                    <li>Monitor with Grafana and Prometheus plus syslog/journald log review, restricted to Wireguard VPN clients.</li>
                     <li>Manage firewall policy, domain blacklisting/whitelisting, and endpoint protection across all org devices.</li>
                     <li>Scheduled backup discipline: weekly Timeshift snapshots on Linux servers; configuration exports for X-Wrt router and managed switch for rapid restore in emergencies.</li>
                 </ul>
@@ -198,7 +200,7 @@
                     <li>Configured Windows-based print server with USB-attached Brother printer for organizational printing; selected after evaluating CUPS on Linux, where vendor driver support for the Brother hardware was insufficient.</li>
                     <li>Migrated facility AV from Dish Network satellite to terrestrial ATSC 1.0/3.0 over-the-air reception: replaced antennas, deployed RG6 coaxial distribution to 5 TV endpoints - eliminated ~$1,320/year in subscription and rebroadcast fees while doubling coverage.</li>
                     <li>Build and maintain a fleet of hand-assembled desktop workstations and image OS deployments across desktops and laptops for standardized, repeatable provisioning; handle hardware repair including a laptop motherboard replacement, plus driver lifecycle management.</li>
-                    <li>Manage the thermal lifecycle with Honeywell PTM7950 phase-change material instead of standard paste: it conforms flat to the die for even heat-spreader contact, approaches liquid-metal performance while staying non-conductive (no short-circuit risk), and resists the pump-out and dry-out that degrade paste over time - durable, low-maintenance cooling.</li>
+                    <li>Repaste and repad CPUs/GPUs with Honeywell PTM7950 phase-change material - non-conductive (none of liquid metal's short-circuit risk), and it doesn't pump out or dry up like paste, so it holds for years.</li>
                     <li>Hardware upgrades: migrate laptops and desktops to larger SSDs by cloning the source drive and expanding the OS partition - capacity gains without re-imaging or data loss - and upgrade wireless from Intel AX201 (Wi-Fi 6) to Intel BE200 (Wi-Fi 7) modules.</li>
                 </ul>
 
