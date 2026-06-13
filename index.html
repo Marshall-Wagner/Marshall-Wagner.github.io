@@ -201,7 +201,7 @@
                 <ul>
                     <li>Maintain an Ubuntu 24.04 LTS server stack under Ubuntu Pro (ESM + Livepatch for kernel patching without reboot): DNS resolver, SSL certificates, and a Caddy reverse proxy with auto Let's Encrypt TLS.</li>
                     <li>Self-host org services on the stack: RocketChat (team chat), Zammad (help desk ticketing), Immich (photos, VPN-restricted), and Jellyfin (media streaming).</li>
-                    <li>Monitor with Grafana and Prometheus plus syslog/journald log review, restricted to Wireguard VPN clients.</li>
+                    <li>Monitor host and service health on Grafana dashboards backed by Prometheus (Node Exporter) plus syslog/journald review: track CPU/RAM saturation and per-interface packet drop/error counters to spot failing services and traffic anomalies that can indicate a possible DoS. VPN-restricted to Wireguard clients.</li>
                     <li>Manage firewall policy, domain blacklisting/whitelisting, and endpoint protection across all org devices.</li>
                     <li>Scheduled backup discipline: weekly Timeshift snapshots on Linux servers; configuration exports for X-Wrt router and managed switch for rapid restore in emergencies.</li>
                 </ul>
