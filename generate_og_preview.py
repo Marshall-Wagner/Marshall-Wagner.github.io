@@ -67,7 +67,7 @@ def build(output_path: Path) -> None:
     kw_font = font(24)
     draw.text(
         (left, 420),
-        "Enterprise Networks  ·  5G WAN  ·  WPA3-SAE  ·  Wireguard  ·  AdGuard Home",
+        "Enterprise Networks  ·  5G WAN  ·  802.1X / RADIUS  ·  Wireguard  ·  AdGuard Home",
         fill=TEXT,
         font=kw_font,
     )
