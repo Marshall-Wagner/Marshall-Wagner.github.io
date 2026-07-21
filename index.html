@@ -86,7 +86,7 @@
                 </div>
                 <div class="skill-card">
                     <h3>Security</h3>
-                    <p>Endpoint protection, fail2ban intrusion prevention, Nmap, domain blacklisting/whitelisting, AdGuard Home DNS filtering, DNSSEC validation, DoH/DoT encrypted DNS, CSRF mitigation, self-hosted video surveillance / NVR (Frigate, local AI object detection)</p>
+                    <p>Endpoint protection, fail2ban intrusion prevention, Nmap, domain blacklisting/whitelisting, AdGuard Home DNS filtering, DNSSEC validation, DoH/DoT encrypted DNS, CSRF mitigation, self-hosted video surveillance / NVR (Frigate, local AI object detection), Linux kernel-module hardening (attack-surface reduction)</p>
                 </div>
                 <div class="skill-card">
                     <h3>Scripting &amp; Dev</h3>
@@ -266,7 +266,7 @@
                 </div>
                 <div class="project-card">
                     <h3>Defense-in-Depth Security Hardening - Layer 2 to Endpoint</h3>
-                    <p>Layered controls across the org network: Layer 2 switch hardening (DHCP snooping, IGMP snooping, loop detection, per-port broadcast storm control); WPA2-Enterprise 802.1X (per-user RADIUS) on the staff Wi-Fi, with the segmented 2.4 GHz IoT SSID in WPA3-Personal/WPA2-Personal transition mode (802.11w Protected Management Frames in capable mode so the WPA2-only cameras still associate; 20-character LUDS); AdGuard Home VPN-attached DNS resolver (DNSSEC + DoH/DoT + ad/tracker/malware filtering); Windows 10/11 Enterprise + IoT LTSC for reduced attack surface and controlled patching (Windows Update for Business deferral / LTSC servicing to protect uptime); Ubuntu Pro (ESM + Livepatch) on the Linux server; firewall policy + domain blacklisting/whitelisting across all endpoints; fail2ban intrusion prevention on the public-facing Jellyfin media server (bans an IP for 24 hours after 5 failed logins).</p>
+                    <p>Layered controls across the org network: Layer 2 switch hardening (DHCP snooping, IGMP snooping, loop detection, per-port broadcast storm control); WPA2-Enterprise 802.1X (per-user RADIUS) on the staff Wi-Fi, with the segmented 2.4 GHz IoT SSID in WPA3-Personal/WPA2-Personal transition mode (802.11w Protected Management Frames in capable mode so the WPA2-only cameras still associate; 20-character LUDS); AdGuard Home VPN-attached DNS resolver (DNSSEC + DoH/DoT + ad/tracker/malware filtering); Windows 10/11 Enterprise + IoT LTSC for reduced attack surface and controlled patching (Windows Update for Business deferral / LTSC servicing to protect uptime); Ubuntu Pro (ESM + Livepatch) on the Linux server; reduced Linux kernel attack surface by disabling the unmaintained in-kernel NTFS driver in favor of the userspace ntfs-3g FUSE driver, keeping parsing of untrusted filesystem metadata out of the kernel (consistent with CIS filesystem-module hardening); firewall policy + domain blacklisting/whitelisting across all endpoints; fail2ban intrusion prevention on the public-facing Jellyfin media server (bans an IP for 24 hours after 5 failed logins).</p>
                 </div>
                 <div class="project-card">
                     <h3>Enterprise 802.1X / RADIUS Authentication</h3>
