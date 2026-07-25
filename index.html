@@ -184,7 +184,7 @@
 
                 <h4 class="job-group">Network &amp; Infrastructure</h4>
                 <ul>
-                    <li>Designed and deployed enterprise network: OpenWRT edge router on PC hardware (Intel X540 10 Gbps NIC), managed 2.5 Gbps switch with 10 Gbps uplink, wireless APs across two buildings, with the second-building AP fed by a wired inter-building cable run, and UL-listed Cat8/Cat6A S/FTP shielded backbone (T568B termination) for EMI/RFI rejection.</li>
+                    <li>Designed and deployed enterprise network: OpenWRT edge router on PC hardware with dual Intel 10-Gigabit NICs (SFP+ and 10GBASE-T); a 10-Gigabit switch backbone with an SFP+ direct-attach copper (DAC) uplink to the managed 2.5 Gbps switch (chosen to cut power draw and heat versus 10GBASE-T) and 10GBASE-T uplinks to two secondary switches; wireless APs across two buildings, with the second-building AP fed by a wired inter-building cable run; and UL-listed Cat8/Cat6A S/FTP shielded backbone (T568B termination) for EMI/RFI rejection.</li>
                     <li>Configured Quectel RM520N-GLAA industrial 5G M.2 modem via AT commands as the primary WAN uplink for the facility; modem connected to the router via M.2-to-USB-A adapter board (USB 3.0 / 5 Gbps) for flexible physical placement, inheriting the router's UPS power domain. Replaced the thermal pads on the modem and its adapter board to keep the always-on WAN uplink thermally stable under sustained load in the high-temperature shop environment.</li>
                     <li>Configured per-port broadcast storm control and Layer 2 hardening on the managed switch: DHCP snooping, IGMP snooping, and loop detection.</li>
                     <li>Monitor router and managed switch interfaces for unauthorized devices; block unauthorized clients via MAC address filtering.</li>
@@ -262,7 +262,7 @@
             <div class="projects-grid">
                 <div class="project-card">
                     <h3>Enterprise Network Overhaul</h3>
-                    <p>Designed and built company network from scratch: Cat8/Cat6A S/FTP backbone, managed 2.5 Gbps switch with 10 Gbps uplink, OpenWRT edge router on PC hardware with primary 5G WAN, and on-prem point-to-site Wireguard VPN for employee remote LAN access. UPS with AVR and EMI/RFI line filtering on the 5G modem, edge router, managed switch, and on-prem server to condition power and maintain availability through power flickers and brownouts.</p>
+                    <p>Designed and built company network from scratch: Cat8/Cat6A S/FTP backbone; a 10-Gigabit switch backbone (SFP+ direct-attach copper / DAC uplink to the managed 2.5 Gbps switch, chosen for lower power and heat than 10GBASE-T, plus 10GBASE-T uplinks to two secondary switches); OpenWRT edge router on PC hardware with dual Intel 10-Gigabit NICs and primary 5G WAN; and on-prem point-to-site Wireguard VPN for employee remote LAN access. UPS with AVR and EMI/RFI line filtering on the 5G modem, edge router, managed switch, and on-prem server to condition power and maintain availability through power flickers and brownouts.</p>
                 </div>
                 <div class="project-card">
                     <h3>Defense-in-Depth Security Hardening - Layer 2 to Endpoint</h3>
