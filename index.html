@@ -209,6 +209,7 @@
                     <li>Maintained Ubuntu 24.04 LTS stack under Ubuntu Pro (ESM + Livepatch for zero-reboot kernel patching): DNS, SSL, and Caddy reverse proxy with auto Let's Encrypt TLS.</li>
                     <li>Self-hosted RocketChat, Zammad (help desk), Immich (VPN-restricted photos), and Jellyfin (media streaming).</li>
                     <li>Monitored host/service health via Grafana + Prometheus (Node Exporter); tracked CPU/RAM saturation and per-interface drop/error counters to detect anomalies and possible DoS. Caddy front-end encrypts all LAN/VPN traffic; Grafana never publicly exposed.</li>
+                    <li>Extended Prometheus/Grafana stack with SNMP monitoring via snmp_exporter: tracks router and switch interface counters (bandwidth, errors, discards), device CPU/memory, and 5G modem signal metrics - single-pane visibility from host services down to the network layer.</li>
                     <li>Configured Grafana alerting via Gotify mobile push (low disk, high CPU, conntrack saturation); independent UptimeRobot monitor emails on full outages with a public status page.</li>
                     <li>Managed firewall policy, domain blacklisting/whitelisting, and endpoint protection across all devices.</li>
                     <li>Scheduled weekly Timeshift snapshots; configuration exports for router and switch for rapid emergency restore.</li>
