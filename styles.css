@@ -28,13 +28,41 @@ body {
     background: var(--bg);
 }
 
+/* ===== Skip link (a11y) ===== */
+.skip-link {
+    position: absolute;
+    top: -100%;
+    left: 1rem;
+    padding: 0.5rem 1rem;
+    background: var(--primary);
+    color: #fff;
+    font-size: 0.95rem;
+    font-weight: 600;
+    border-radius: 0 0 6px 6px;
+    z-index: 100;
+    text-decoration: none;
+    transition: top 0.2s;
+}
+
+.skip-link:focus {
+    top: 0;
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
+}
+
+/* ===== Focus styles ===== */
+:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
+}
+
 .container {
     max-width: 1100px;
     margin: 0 auto;
     padding: 0 1.5rem;
 }
 
-/* Hero */
+/* ===== Hero ===== */
 .hero {
     background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
     color: #fff;
@@ -126,7 +154,7 @@ body {
     background: #c45f08;
 }
 
-/* Navbar */
+/* ===== Navbar ===== */
 .navbar {
     background: var(--card);
     border-bottom: 1px solid var(--border);
@@ -160,7 +188,7 @@ body {
     background: rgba(59, 130, 246, 0.08);
 }
 
-/* Sections */
+/* ===== Sections ===== */
 main {
     padding: 3rem 1.5rem;
 }
@@ -184,7 +212,20 @@ section p {
     font-size: 1.05rem;
 }
 
-/* Skills */
+/* ===== Impact list (Summary) ===== */
+.impact-list {
+    list-style: disc;
+    padding-left: 1.5rem;
+    margin: 1rem 0;
+}
+
+.impact-list li {
+    color: var(--text);
+    font-size: 1.02rem;
+    margin-bottom: 0.4rem;
+}
+
+/* ===== Skills ===== */
 .skills-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -218,7 +259,7 @@ section p {
     line-height: 1.5;
 }
 
-/* Credentials */
+/* ===== Credentials ===== */
 .cert-group {
     color: var(--primary);
     font-size: 1.1rem;
@@ -308,7 +349,7 @@ section p {
     font-family: "Courier New", monospace;
 }
 
-/* Experience */
+/* ===== Experience ===== */
 .job {
     background: var(--card);
     border: 1px solid var(--border);
@@ -369,7 +410,7 @@ section p {
     font-size: 0.95rem;
 }
 
-/* Education */
+/* ===== Education ===== */
 .education-list {
     list-style: none;
 }
@@ -395,7 +436,7 @@ section p {
     font-size: 0.92rem;
 }
 
-/* Projects */
+/* ===== Projects ===== */
 .projects-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -426,9 +467,24 @@ section p {
 .project-card p {
     color: var(--text);
     font-size: 0.95rem;
+    margin-bottom: 0.6rem;
 }
 
-/* Footer */
+/* Key-details list inside project cards */
+.project-details {
+    list-style: disc;
+    padding-left: 1.25rem;
+    margin: 0;
+}
+
+.project-details li {
+    color: var(--muted);
+    font-size: 0.88rem;
+    margin-bottom: 0.3rem;
+    line-height: 1.45;
+}
+
+/* ===== Footer ===== */
 footer {
     background: #111827;
     color: #d1d5db;
@@ -446,7 +502,7 @@ footer a:hover {
     text-decoration: underline;
 }
 
-/* Responsive */
+/* ===== Responsive ===== */
 @media (max-width: 600px) {
     .hero {
         padding: 2.5rem 0 2rem;
@@ -455,6 +511,26 @@ footer a:hover {
     .contact-list {
         flex-direction: column;
         gap: 0.4rem;
+    }
+
+    /* Stack CTA buttons on mobile */
+    .linkedin-btn {
+        display: flex;
+        width: 100%;
+        max-width: 320px;
+        margin-left: auto;
+        margin-right: auto;
+        justify-content: center;
+    }
+
+    .linkedin-btn + .linkedin-btn {
+        margin-top: 0.6rem;
+        margin-left: auto;
+    }
+
+    .email-btn,
+    .credly-btn {
+        margin-left: auto;
     }
 
     main {
@@ -469,20 +545,17 @@ footer a:hover {
         padding: 1.1rem;
     }
 
-    .linkedin-btn {
-        display: flex;
-        width: 100%;
-        max-width: 280px;
-        margin: 1rem auto 0;
+    .badge-grid {
         justify-content: center;
     }
 }
 
-/* Print */
+/* ===== Print ===== */
 @media print {
     .navbar,
     footer,
-    .linkedin-btn {
+    .linkedin-btn,
+    .skip-link {
         display: none;
     }
 
@@ -508,5 +581,6 @@ footer a:hover {
 
     section h2 {
         color: #000;
+        border-bottom-color: #000;
     }
 }

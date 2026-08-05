@@ -19,6 +19,8 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <a href="#main" class="skip-link">Skip to main content</a>
+
     <header class="hero">
         <div class="container">
             <h1>Marshall Wagner</h1>
@@ -48,7 +50,7 @@
         </div>
     </header>
 
-    <nav class="navbar">
+    <nav class="navbar" aria-label="Primary">
         <div class="container">
             <a href="#summary">Summary</a>
             <a href="#skills">Skills</a>
@@ -59,14 +61,20 @@
         </div>
     </nav>
 
-    <main class="container">
-        <section id="summary">
-            <h2>Summary</h2>
-            <p>One-person IT department running enterprise network, VPN, authentication, and server infrastructure for a Texas manufacturing operation since 2016. Hands-on experience with Ubuntu Server, Windows Server/Active Directory, OpenWRT, Wireguard, enterprise 802.1X/RADIUS, industrial 5G modems, and structured cabling. The infrastructure pays for itself: self-hosted services replace SaaS subscriptions (remote support, help desk, password vaulting, monitoring), an over-the-air ATSC migration eliminated ~$1,320/year in satellite and rebroadcast fees, and storage and RAM upgrades keep aging hardware secure and in service instead of replaced. CompTIA Network+ and A+ certified; A.S. Business/Commerce from Blinn College (2024); pursuing B.S. Computer Information Systems at East Texas A&amp;M University (Expected May 2027).</p>
+    <main id="main" class="container">
+        <section id="summary" aria-labelledby="summary-heading">
+            <h2 id="summary-heading">Summary</h2>
+            <p>One-person IT department running enterprise network, VPN, authentication, and server infrastructure for a Texas manufacturing operation since 2016. Hands-on with Ubuntu Server, Windows Server/Active Directory, OpenWRT, Wireguard, enterprise 802.1X/RADIUS, industrial 5G modems, and structured cabling.</p5>
+            <ul class="impact-list">
+                <li>Self-hosted services replace SaaS subscriptions (remote support, help desk, password vaulting, monitoring).</li>
+                <li>Over-the-air ATSC migration eliminated ~$1,320/year in satellite and rebroadcast fees.</li>
+                <li>Storage and RAM upgrades keep aging hardware secure and in service instead of replaced.</li>
+            </ul>
+            <p>CompTIA Network+ and A+ certified; A.S. Business/Commerce from Blinn College (2024); pursuing B.S. Computer Information Systems at East Texas A&amp;M University (Expected May 2027).</p>
         </section>
 
-        <section id="skills">
-            <h2>Technical Skills</h2>
+        <section id="skills" aria-labelledby="skills-heading">
+            <h2 id="skills-heading">Technical Skills</h2>
             <div class="skills-grid">
                 <div class="skill-card">
                     <h3>Systems</h3>
@@ -94,16 +102,16 @@
                 </div>
                 <div class="skill-card">
                     <h3>Multimedia</h3>
-                    <p>LosslessCut (lossless cut/trim), DaVinci Resolve Studio (AI-transcribed subtitles) + Aegisub (styling), mkvtoolnix (remux subtitle/multi-language audio), Handbrake &amp; ffmpeg (10-bit HEVC via x265/NVENC, AV1 via SVT-AV1), MAGIX Vegas Pro (edit-to-AV1, backup), Adobe Photoshop/Illustrator, Audacity (lossless audio)</p>
+                    <p>losslessCut (lossless cut/trim), DaVinci Resolve Studio (AI-transcribed subtitles) + Aegisub (styling), mkvtoolnix (remux subtitle/multi-language audio), Handbrake &amp; ffmpeg (10-bit HEVC via x265/NVENC, AV1 via SVT-AV1), MAGIX Vegas Pro (edit-to-AV1, backup), Adobe Photoshop/Illustrator, Audacity (lossless audio)</p>
                 </div>
             </div>
         </section>
 
-        <section id="credentials">
-            <h2>Credentials</h2>
+        <section id="credentials" aria-labelledby="credentials-heading">
+            <h2 id="credentials-heading">Credentials</h2>
 
             <h3 class="cert-group">Verified Badges</h3>
-            <p class="cert-intro">Click a badge to view the credential on Credly - one-click verification, no codes required.</p>
+            <p class="cert-intro">Click a badge to verify on Credly - one-click, no codes required.</p>
             <div class="badge-grid">
                 <a class="badge-card" href="https://www.credly.com/badges/306753db-a635-4a5e-8d81-c66818ec73f9/public_url" target="_blank" rel="noopener" aria-label="Verify CompTIA Network+ certification on Credly">
                     <img src="images/comptia-network-ce-certification.1.png" alt="CompTIA Network+ Certified badge" loading="lazy">
@@ -130,7 +138,7 @@
                     <img src="images/national-career-readiness-certificate-ncrc-platinum.png" alt="ACT WorkKeys National Career Readiness Certificate Platinum badge" loading="lazy">
                     <div class="badge-meta">
                         <strong>NCRC Platinum</strong>
-                        <span>ACT WorkKeys &middot; May 2025</span>
+                        <span>ACT WorkKeys · May 2025</span>
                     </div>
                 </a>
                 <a class="badge-card" href="https://www.credly.com/badges/2c37a5bc-fb1a-4769-b0a6-390af3af017a/public_url" target="_blank" rel="noopener" aria-label="Verify PMI Fundamentals of Predictive Project Management on Credly">
@@ -172,123 +180,154 @@
             </ul>
         </section>
 
-        <section id="experience">
-            <h2>Experience</h2>
+        <section id="experience" aria-labelledby="experience-heading">
+            <h2 id="experience-heading">Experience</h2>
 
             <article class="job">
                 <header>
                     <h3>IT Administrator</h3>
-                    <p class="job-meta">WW Machining - Brenham, Texas &middot; June 2016 - Present</p>
+                    <p class="job-meta">WW Machining - Brenham, Texas · June 2016 - Present</p>
                     <p class="job-context">Promoted from IT Technician (June 2016) to IT Administrator (June 2022). Sole IT operator for a manufacturing business; additional duties in post-production and bookkeeping.</p>
                 </header>
 
                 <h4 class="job-group">Network &amp; Infrastructure</h4>
                 <ul>
-                    <li>Designed and deployed enterprise network: OpenWRT edge router on PC hardware with dual Intel 10-Gigabit NICs (SFP+ and 10GBASE-T); a 10-Gigabit switch backbone with an SFP+ direct-attach copper (DAC) uplink to the managed 2.5 Gbps switch (chosen to cut power draw and heat versus 10GBASE-T) and 10GBASE-T uplinks to two secondary switches; wireless APs across two buildings, with the second-building AP fed over a wired inter-building run terminating on a shielded, surge-protected switch at the building entry (guarding the cross-building copper against surge and ground-potential differences); and UL-listed Cat8/Cat6A S/FTP shielded backbone (T568B termination) for EMI/RFI rejection.</li>
-                    <li>Configured Quectel RM520N-GLAA industrial 5G M.2 modem via AT commands as the primary WAN uplink for the facility; modem connected to the router via M.2-to-USB-A adapter board (USB 3.0 / 5 Gbps) for flexible physical placement, inheriting the router's UPS power domain. Replaced the thermal pads on the modem and its adapter board to keep the always-on WAN uplink thermally stable under sustained load in the high-temperature shop environment.</li>
-                    <li>Configured 802.1p QoS, per-port broadcast storm control, and Layer 2 hardening on the managed switch: DHCP snooping, IGMP snooping, and loop detection.</li>
-                    <li>Monitor router and managed switch interfaces for unauthorized devices; block unauthorized clients via MAC address filtering.</li>
-                    <li>Configured wireless APs in WPA3-Personal/WPA2-Personal transition mode (one SSID serving both WPA3-SAE and legacy WPA2-only clients) with 20-character LUDS passphrases (lower/upper/digits/symbols) to resist brute-force and offline-dictionary attacks; the staff SSID was later migrated to per-user WPA2-Enterprise 802.1X (see the Enterprise 802.1X / RADIUS Authentication project).</li>
-                    <li>Tuned the 2.4 GHz wireless network for reliable long-range connectivity to distant WPA2-only IoT cameras (incompatible with 5 GHz and WPA3-SAE): capped modulation at MCS 7 (802.11n), 20 MHz channel width, optimized channel selection, and maximum TX power - trading peak throughput for range and link stability (1024-QAM/MCS 11 dropped at range; the MCS 7 cap held).</li>
-                    <li>Built point-to-site Wireguard VPN on-prem for secure employee remote access to LAN services; VPN client DNS routed through AdGuard Home.</li>
-                    <li>Migrated Wireguard server from cloud VPS relay (interim workaround for CGNAT-blocked P2P traversal) to direct on-prem after provisioning static IPv4 from the carrier - eliminated the relay hop.</li>
-                    <li>Deployed OpenVPN Access Server on-prem alongside Wireguard as a fallback remote-access VPN (LDAP/AD integration available).</li>
-                    <li>Configured AdGuard Home as a VPN-attached DNS resolver: network-wide ad/tracker/malware blocking, DNSSEC validation, and encrypted upstream DNS (DoH/DoT), plus query logging (client IPs, 90-day retention) for security visibility and incident forensics.</li>
-                    <li>UPS with automatic voltage regulation (AVR) and EMI/RFI line filtering on the 5G modem, edge router, managed switch, and on-prem server - conditions power and maintains network, VPN, and DNS availability through power flickers and brownouts.</li>
+                    <li>Built enterprise network from scratch: 10 Gb backbone with SFP+ DAC uplinks (chosen over 10GBASE-T to cut power/heat), OpenWRT edge router with dual Intel 10G NICs, Cat8/Cat6A S/FTP shielded backbone, and inter-building surge-protected switch feed.</li>
+                    <li>Established industrial 5G (Quectel RM520N-GLAA) as primary WAN uplink via AT-command configuration; thermal-padded modem and adapter for sustained high-temperature shop operation.</li>
+                    <li>Hardened Layer 2: 802.1p QoS, DHCP/IGMP snooping, loop detection, per-port broadcast storm control.</li>
+                    <li>Maintained real-time authorized-device inventory; blocked unknown clients via MAC filtering.</li>
+                    <li>Secured Wi-Fi with WPA3/WPA2 transition mode and 20-char LUDS passphrases; migrated staff SSID to per-user WPA2-Enterprise 802.1X (see <a href="#project-8021x">Enterprise 802.1X / RADIUS Authentication</a>).</li>
+                    <li>Tuned 2.4 GHz radio for long-range WPA2-only IoT cameras: capped MCS 7, 20 MHz channel, max TX power - trading peak throughput for reliable link stability at range.</li>
+                    <li>Enabled secure remote access via on-prem Wireguard VPN with DNS routed through AdGuard Home; migrated from cloud VPS relay to direct on-prem after provisioning static IPv4.</li>
+                    <li>Deployed OpenVPN Access Server alongside Wireguard as fallback VPN (LDAP/AD integration available).</li>
+                    <li>Configured AdGuard Home as VPN-attached DNS resolver: network-wide ad/tracker/malware blocking, DNSSEC, DoH/DoT, and 90-day query logging for forensics.</li>
+                    <li>Protected core infrastructure (5G modem, router, switch, server) with UPS + AVR + EMI/RFI filtering to maintain availability through brownouts and flickers.</li>
                 </ul>
 
                 <h4 class="job-group">Server Administration</h4>
                 <ul>
-                    <li>Maintain an Ubuntu 24.04 LTS server stack under Ubuntu Pro (ESM + Livepatch for kernel patching without reboot): DNS resolver, SSL certificates, and a Caddy reverse proxy with auto Let's Encrypt TLS.</li>
-                    <li>Self-host org services on the stack: RocketChat (team chat), Zammad (help desk ticketing), Immich (photos, VPN-restricted), and Jellyfin (media streaming).</li>
-                    <li>Monitor host and service health on Grafana dashboards backed by Prometheus (Node Exporter) plus syslog/journald review: track CPU/RAM saturation and per-interface packet drop/error counters to spot failing services and traffic anomalies that can indicate a possible DoS. Fronted by Caddy with automatic HTTPS/TLS that encrypts internal LAN and VPN clients alike, IP-restricted to the LAN and Wireguard VPN, never publicly exposed. Grafana alerting sends mobile push notifications via Gotify (low disk, sustained high CPU, conntrack saturation as a DoS early-warning), while an independent external UptimeRobot HTTP monitor on the Jellyfin server emails on full outages the on-box stack can't self-report, with a public status page so users can check availability themselves.</li>
-                    <li>Manage firewall policy, domain blacklisting/whitelisting, and endpoint protection across all org devices.</li>
-                    <li>Scheduled backup discipline: weekly Timeshift snapshots on Linux servers; configuration exports for X-Wrt router and managed switch for rapid restore in emergencies.</li>
+                    <li>Maintained Ubuntu 24.04 LTS stack under Ubuntu Pro (ESM + Livepatch for zero-reboot kernel patching): DNS, SSL, and Caddy reverse proxy with auto Let's Encrypt TLS.</li>
+                    <li>Self-hosted RocketChat, Zammad (help desk), Immich (VPN-restricted photos), and Jellyfin (media streaming).</li>
+                    <li>Monitored host/service health via Grafana + Prometheus (Node Exporter); tracked CPU/RAM saturation and per-interface drop/error counters to detect anomalies and possible DoS. Caddy front-end encrypts all LAN/VPN traffic; Grafana never publicly exposed.</li>
+                    <li>Configured Grafana alerting via Gotify mobile push (low disk, high CPU, conntrack saturation); independent UptimeRobot monitor emails on full outages with a public status page.</li>
+                    <li>Managed firewall policy, domain blacklisting/whitelisting, and endpoint protection across all devices.</li>
+                    <li>Scheduled weekly Timeshift snapshots; configuration exports for router and switch for rapid emergency restore.</li>
                 </ul>
 
                 <h4 class="job-group">Support &amp; Hardware</h4>
                 <ul>
-                    <li>Run a self-hosted internal IT help desk: log, troubleshoot, and resolve end-user hardware, software, OS, and network-connectivity issues, tracked as tickets.</li>
-                    <li>Manage software licensing, deployment, and renewals across the org: Windows 11, Windows 10 (LTSC and Extended Security Updates / ESU), Windows Server 2025, Microsoft Office, Adobe Acrobat Pro, DaVinci Resolve Studio, and SolidWorks Premium CAD/CAM (network licensing via SolidNetWork License Manager).</li>
-                    <li>Self-hosted RustDesk relay + ID servers (hbbr/hbbs) on Ubuntu 24.04 LTS - Windows and Linux peer endpoints connect via the internal relay for remote control, unattended IT support, and file transfer between machines (replaces TeamViewer/AnyDesk SaaS); the Linux peer runs X.org since Wayland&rsquo;s per-session screen-capture authorization breaks unattended capture.</li>
-                    <li>Configured Windows-based print server with USB-attached Brother printer for organizational printing; selected after evaluating CUPS on Linux, where vendor driver support for the Brother hardware was insufficient.</li>
-                    <li>Migrated facility AV from Dish Network satellite to terrestrial ATSC 1.0/3.0 over-the-air reception: replaced antennas, deployed RG6 coaxial distribution to 5 TV endpoints - eliminated ~$1,320/year in subscription and rebroadcast fees while doubling coverage.</li>
-                    <li>Build and maintain a fleet of hand-assembled desktop workstations and image OS deployments across desktops and laptops for standardized, repeatable provisioning; handle hardware repair including a laptop motherboard replacement, plus driver lifecycle management.</li>
-                    <li>Maintain an IT asset register tracking component inventory, per-machine configuration, warranty and lifecycle status, and RMA processing across the organization's systems.</li>
-                    <li>Repaste CPU/GPU dies with Honeywell PTM7950 phase-change material - non-conductive (none of liquid metal's short-circuit risk), and it doesn't pump out or dry up like paste, so it holds for years - and repad motherboard VRM heatsinks and GPU VRAM/VRM with thickness-matched, high-performance thermal pads sized to each component for proper contact.</li>
-                    <li>On a SolidWorks CAD workstation, diagnosed intermittent GPU artifacting to PCIe link errors caused by GPU sag - isolated with HWiNFO PCIe error-counter telemetry (~1,300 errors upright vs ~12 when reoriented) and resolved with a GPU support bracket; separately re-padded the VRAM (factory pads were reaching ~100&deg;C under FurMark, near GDDR throttling) and repasted the core, then validated the thermal rework with the SolidWorks RX benchmark - the GPU peaked at ~51&deg;C core / ~58&deg;C VRAM at sustained CAD load.</li>
-                    <li>Hardware upgrades: clone-migrate laptop and desktop storage to better drives - larger SSDs, factory QLC SSDs swapped for TLC (better endurance and sustained performance), and 2.5-inch SATA HDDs replaced with SSDs - expanding the OS partition with no re-image or data loss; and upgrade wireless from Intel AX201 (Wi-Fi 6) to Intel BE200 (Wi-Fi 7) for performance and broad compatibility.</li>
-                    <li>Extend the service life of aging laptops on a budget: upgrade RAM to meet newer-OS minimum requirements; re-image with Windows 10 LTSC (extended-support builds) or Linux on machines that lack the TPM 2.0 required for Windows 11; and apply Windows 10 Extended Security Update (ESU) policies in place where a re-image would risk data loss - keeping them secure and supported until budget allows a full hardware refresh.</li>
+                    <li>Ran self-hosted internal help desk (Zammad): logged and resolved end-user hardware, software, OS, and network issues as tickets.</li>
+                    <li>Managed software licensing and renewals: Windows 11, Windows 10 LTSC + ESU, Windows Server 2025, Microsoft Office, Adobe Acrobat Pro, DaVinci Resolve Studio, SolidWorks Premium (SolidNetWork License Manager).</li>
+                    <li>Replaced TeamViewer/AnyDesk SaaS with self-hosted RustDesk relay + ID servers (hbbr/hbbs) on Ubuntu 24.04 LTS for remote control and unattended IT support.</li>
+                    <li>Configured Windows print server with USB-attached Brother printer after evaluating CUPS on Linux (insufficient vendor driver support).</li>
+                    <li>Eliminated ~$1,320/year in satellite/rebroadcast fees by migrating facility AV to OTA ATSC 1.0/3.0; doubled coverage from 2 to 5 TVs.</li>
+                    <li>Built and maintained fleet of hand-assembled workstations; standardized OS deployments and handled hardware repair including laptop motherboard replacement.</li>
+                    <li>Maintained IT asset register: inventory, per-machine config, warranty/lifecycle status, RMA processing.</li>
+                    <li>Extended hardware service life: repasted CPU/GPU dies with Honeywell PTM7950 phase-change material; repadded VRM/VRAM with thickness-matched thermal pads for long-term stability.</li>
+                    <li>Diagnosed GPU artifacting from PCIe link errors caused by GPU sag on SolidWorks workstation (~1,300 errors upright vs ~12 reoriented); resolved with support bracket. Re-padded VRAM (factory ~100°C to 58°C under CAD load) and repasted core (51°C).</li>
+                    <li>Clone-migrated storage to larger/TLC SSDs (no re-image or data loss); upgraded wireless from Intel AX201 (Wi-Fi 6) to BE200 (Wi-Fi 7).</li>
+                    <li>Kept aging laptops secure and supported: RAM upgrades, Windows 10 LTSC re-images, ESU policies where re-image risks data loss - deferring full refresh until budget allows.</li>
                 </ul>
 
                 <h4 class="job-group">Post-Production <span class="job-group-dates">(2025 - Present)</span></h4>
                 <ul>
-                    <li>Cut video archive storage ~40% with no visible quality loss via custom 10-bit encoding: HEVC with x265 (very slow) and NVENC, plus AV1 with SVT-AV1, in Handbrake.</li>
-                    <li>Edit video with lossless cutting/trimming (LosslessCut), with MAGIX Vegas Pro as a backup editor for AV1 output; add subtitles (DaVinci Resolve Studio AI transcription, styled in Aegisub) and remux multi-language audio/subtitle tracks with mkvtoolnix.</li>
-                    <li>Pre-encode dedicated remote-delivery copies for off-LAN viewers instead of relying on Jellyfin's live transcode: a deliberate 10-bit HEVC/AV1 encode holds noticeably better quality at a lower bitrate than Jellyfin's on-the-fly H.264 (x264/NVENC) and offloads the server from per-viewer transcoding. Target ~4-7 Mbps, set by measuring the phone's actual LTE throughput to the server itself with a self-hosted LibreSpeed instance (so the figure reflects the real delivery path, not an idealized speed-test server), letting mobile clients stream the internal Jellyfin server smoothly. Audio is delivered as Opus, which plays natively in modern browsers at better quality for a lower bitrate, or passed through as AAC when the source is already AAC to skip a needless lossy re-encode.</li>
-                    <li>Demux audio from video with mkvtoolnix, then edit and re-encode in Audacity using its FFmpeg import library - the demuxed audio sits in a Matroska container that neither Audacity nor Adobe Audition opens out of the box. Source audio is 32-bit float PCM or 16-bit FLAC, depending on the recording source (e.g., OBS Studio).</li>
-                    <li>Capture photography with Canon DSLR cameras, edit photos in Adobe Photoshop, and design promotional graphics in Adobe Illustrator, Photoshop, and Clip Studio Paint.</li>
+                    <li>Cut video archive storage ~40% via custom 10-bit HEVC/AV1 encoding with no visible quality loss.</li>
+                    <li>Edited video with lossless cutting (LosslessCut) + MAGIX Vegas Pro (AV1 output backup); AI-transcribed subtitles via DaVinci Resolve + Aegisub styling; remuxed multi-language tracks with mkvtoolnix.</li>
+                    <li>Pre-encoded remote-delivery copies (10-bit HEVC/AV1, ~4-7 Mbps measured via self-hosted LibreSpeed) instead of relying on Jellyfin live transcode - better quality at lower bitrate and no per-viewer server load.</li>
+                    <li>Demuxed audio (mkvtoolnix) for editing in Audacity; delivered Opus (native browser playback) or AAC passthrough.</li>
+                    <li>Captured and edited photography (Canon DSLR to Photoshop); designed promotional graphics (Illustrator, Clip Studio Paint).</li>
                 </ul>
 
                 <h4 class="job-group">Bookkeeping</h4>
                 <ul>
-                    <li>Maintain QuickBooks ledger for company financials.</li>
+                    <li>Maintained QuickBooks ledger for company financials.</li>
                 </ul>
             </article>
         </section>
 
-        <section id="education">
-            <h2>Education</h2>
+        <section id="education" aria-labelledby="education-heading">
+            <h2 id="education-heading">Education</h2>
             <ul class="education-list">
                 <li>
                     <h3>Bachelor of Science, Computer Information Systems</h3>
-                    <p>East Texas A&amp;M University &middot; 2025-2027 (Expected) &middot; GPA 3.65/4.0</p>
+                    <p>East Texas A&amp;M University · 2025-2027 (Expected) · GPA 3.65/4.0</p>
                 </li>
                 <li>
                     <h3>Associate of Science, Business/Commerce</h3>
-                    <p>Blinn College &middot; 2024 &middot; GPA 3.63/4.0 &middot; Phi Theta Kappa Honor Society</p>
+                    <p>Blinn College · 2024 · GPA 3.63/4.0 · Phi Theta Kappa Honor Society</p>
                 </li>
                 <li>
                     <h3>Computer Information Systems coursework (60+ credit hours)</h3>
-                    <p>Blinn College &middot; Completed December 2025 &middot; 3.70 GPA in CIS courses &middot; Credits transferred to B.S. CIS at East Texas A&amp;M University</p>
+                    <p>Blinn College · Completed December 2025 · 3.70 GPA in CIS courses · Credits transferred to B.S. CIS at East Texas A&amp;M University</p>
                 </li>
                 <li>
                     <h3>Associate of Arts, Liberal Arts &amp; Sciences</h3>
-                    <p>Blinn College &middot; 2022 &middot; GPA 3.79/4.0</p>
+                    <p>Blinn College · 2022 · GPA 3.79/4.0</p>
                 </li>
             </ul>
         </section>
 
-        <section id="projects">
-            <h2>Key Projects</h2>
+        <section id="projects" aria-labelledby="projects-heading">
+            <h2 id="projects-heading">Key Projects</h2>
             <div class="projects-grid">
                 <div class="project-card">
                     <h3>Enterprise Network Overhaul</h3>
-                    <p>Designed and built company network from scratch: Cat8/Cat6A S/FTP backbone; a 10-Gigabit switch backbone (SFP+ direct-attach copper / DAC uplink to the managed 2.5 Gbps switch, chosen for lower power and heat than 10GBASE-T, plus 10GBASE-T uplinks to two secondary switches); OpenWRT edge router on PC hardware with dual Intel 10-Gigabit NICs and primary 5G WAN; and on-prem point-to-site Wireguard VPN for employee remote LAN access. UPS with AVR and EMI/RFI line filtering on the 5G modem, edge router, managed switch, and on-prem server to condition power and maintain availability through power flickers and brownouts.</p>
+                    <p>Built the company network from scratch with 10 Gb backbone, 5G WAN, and on-prem Wireguard VPN - eliminating reliance on external VPN relays and SaaS remote-support tools.</p>
+                    <ul class="project-details">
+                        <li>Cat8/Cat6A S/FTP backbone; SFP+ DAC uplinks chosen over 10GBASE-T to reduce power/heat.</li>
+                        <li>UPS + AVR + EMI/RFI filtering on all core infrastructure for availability through brownouts.</li>
+                    </ul>
                 </div>
                 <div class="project-card">
                     <h3>Defense-in-Depth Security Hardening - Layer 2 to Endpoint</h3>
-                    <p>Layered controls across the org network: Layer 2 switch hardening (DHCP snooping, IGMP snooping, loop detection, per-port broadcast storm control); WPA2-Enterprise 802.1X (per-user RADIUS) on the staff Wi-Fi, with the segmented 2.4 GHz IoT SSID in WPA3-Personal/WPA2-Personal transition mode (802.11w Protected Management Frames in capable mode so the WPA2-only cameras still associate; 20-character LUDS); AdGuard Home VPN-attached DNS resolver (DNSSEC + DoH/DoT + ad/tracker/malware filtering); Windows 10/11 Enterprise + IoT LTSC for reduced attack surface and controlled patching (Windows Update for Business deferral / LTSC servicing to protect uptime); Ubuntu Pro (ESM + Livepatch) on the Linux server; reduced Linux kernel attack surface by disabling the unmaintained in-kernel NTFS driver in favor of the userspace ntfs-3g FUSE driver, keeping parsing of untrusted filesystem metadata out of the kernel (consistent with CIS filesystem-module hardening); firewall policy + domain blacklisting/whitelisting across all endpoints; fail2ban intrusion prevention on the public-facing Jellyfin media server (bans an IP for 24 hours after 5 failed logins).</p>
+                    <p>Applied layered controls so no single point of failure compromises the org: Layer 2 hardening, 802.1X, encrypted DNS, kernel attack-surface reduction, and endpoint protection.</p>
+                    <ul class="project-details">
+                        <li>WPA2-Enterprise 802.1X on staff Wi-Fi; IoT SSID in WPA3/WPA2 transition mode with 802.11w PMF.</li>
+                        <li>AdGuard Home: DNSSEC + DoH/DoT + ad/tracker/malware filtering.</li>
+                        <li>Ubuntu Pro + disabled unmaintained in-kernel NTFS driver (ntfs-3g FUSE instead); fail2ban on Jellyfin (24-hr ban after 5 failed logins).</li>
+                    </ul>
                 </div>
-                <div class="project-card">
+                <div class="project-card" id="project-8021x">
                     <h3>Enterprise 802.1X / RADIUS Authentication</h3>
-                    <p>Deployed enterprise wireless authentication on the WW Machining staff Wi-Fi, replacing a shared Wi-Fi passphrase with per-user 802.1X. Stood up Windows Server 2025 with Active Directory, AD Certificate Services (Enterprise Root CA), and Network Policy Server (NPS) as the RADIUS server; issued the NPS server certificate from the internal CA and configured PEAP-MSCHAPv2 against Active Directory, with RADIUS accounting and authentication logging enabled on NPS for visibility into every auth attempt. An internal-only Certificate Authority Web Enrollment portal (HTTPS certsrv, hosted on IIS), reachable only from devices already on the LAN/Wi-Fi, is used mainly for self-service certificate renewal by already-authorized devices rather than new-device enrollment (a new device cannot reach the portal until it is already on the network); domain-joined machines trust the Enterprise Root CA automatically via Group Policy. The domain controller hosts the AD DNS zone and forwards external queries to AdGuard Home, so domain-joined machines keep network-wide filtering and encrypted DNS. Staff devices authenticate over a WPA2-Enterprise (AES) access point on the 5 GHz SSID with a per-AP random RADIUS shared secret, while the WPA2-only IoT cameras stay isolated on a separate 2.4 GHz PSK SSID. The 802.1X model authenticates each user with their own AD credentials, giving per-user accountability and per-user revocation instead of a shared Wi-Fi password. Proved PEAP-MSCHAPv2 end-to-end from a Linux client with eapol_test before cutting over real devices. The open-source equivalent (FreeRADIUS with a MariaDB / MySQL-compatible backend) was also built, covering both the Microsoft (NPS/AD) and open-source 802.1X RADIUS stacks. The domain controller / NPS runs on UPS-protected power (battery backup, AVR voltage regulation, EMI/RFI filtering) so a brownout or outage on the shop floor doesn&rsquo;t drop company-wide Wi-Fi authentication.</p>
+                    <p>Replaced shared Wi-Fi passphrase with per-user WPA2-Enterprise 802.1X for individual accountability and revocation.</p>
+                    <ul class="project-details">
+                        <li>Windows Server 2025: AD + AD CS (Enterprise Root CA) + NPS as RADIUS; PEAP-MSCHAPv2 against AD with per-AP random shared secrets.</li>
+                        <li>Also built open-source equivalent: FreeRADIUS + MariaDB backend - covering both Microsoft and open-source stacks.</li>
+                        <li>Domain-joined machines trust Root CA via Group Policy; DC/NPS on UPS-protected power so brownouts don't drop Wi-Fi auth.</li>
+                    </ul>
                 </div>
                 <div class="project-card">
                     <h3>Self-Hosted Password Vault - Vaultwarden</h3>
-                    <p>Deployed Vaultwarden for organizational credential management; hardened Docker container behind Caddy reverse proxy with auto Let&rsquo;s Encrypt TLS, HTTP security headers, and rate limiting, with access restricted to the LAN and Wireguard VPN so the vault is never internet-exposed. Cybersecurity coursework focus: Argon2id hashing, password salting, and secure database storage techniques applied in production. Runs on the UPS-protected Ubuntu 24.04 LTS host - credential availability preserved through power flickers and brownouts. For business continuity, an off-site, zero-knowledge-encrypted fallback vault provides a secondary path to critical credentials if the self-hosted instance is ever unavailable.</p>
+                    <p>Deployed organization-wide credential management with zero internet exposure; vault restricted to LAN + Wireguard VPN.</p>
+                    <ul class="project-details">
+                        <li>Hardened Docker container behind Caddy with auto Let's Encrypt TLS, security headers, and rate limiting.</li>
+                        <li>Off-site, zero-knowledge-encrypted fallback vault for business continuity if self-hosted instance is unavailable.</li>
+                    </ul>
                 </div>
                 <div class="project-card">
                     <h3>Self-Hosted Video Surveillance with AI Person Detection</h3>
-                    <p>Deployed a self-hosted NVR for after-hours monitoring of the WW Machining office: a 5 MP PoE dome camera feeding Frigate for AI person detection with 24/7 continuous recording. The camera is powered over PoE by a repurposed 802.3af/at injector reused from a retired 5G modem rather than new hardware, and secured with a randomly generated 20-character LUDS password to resist brute-force attacks. Frigate pulls two RTSP streams from the camera: a low-resolution H.264 sub-stream (640x480 at 5 fps) for detection and the full-resolution H.265 main stream (2560x1920 at 25 fps) for recording. The camera ships RTSP and ONVIF disabled by default (only its proprietary app port exposed), so both were enabled, and HTTPS was enabled on the camera with a self-signed certificate for the Home Assistant integration. Recording is 24/7 continuous as a safety net so nothing is missed if a detection does not trigger; retention is tiered - all footage is kept 3 days, motion-detection events 7 days, and person-detection alerts 14 days. Frigate is also capped to 4 CPU threads so its detection workload doesn&rsquo;t starve the other self-hosted services sharing the server. Frigate records the camera&rsquo;s native H.265 stream directly to disk without re-encoding, with live and event recordings, snapshots, and clips written to a dedicated data SSD separate from the OS drive. The camera is denied outbound internet access at the X-Wrt firewall (its WAN-bound traffic is rejected), so it cannot phone home and Frigate pulls the stream entirely on the LAN. The Frigate web UI is reverse-proxied through Caddy with a real Let&rsquo;s Encrypt TLS certificate and restricted to the LAN and Wireguard VPN, and Home Assistant provides a live camera dashboard and camera firmware-update monitoring (patch-hygiene visibility). The Home Assistant UI is hardened the same way as the rest of the stack: reverse-proxied through Caddy with a Let&rsquo;s Encrypt certificate, restricted to the LAN and Wireguard VPN with remote access disabled, and protected by a 64-character LUDS password. The result is self-hosted video surveillance with 24/7 recording, AI person detection, and tiered retention - no cloud or subscription dependency.</p>
+                    <p>Deployed fully self-hosted NVR with 24/7 continuous recording, AI person detection, and tiered retention - no cloud or subscription dependency.</p>
+                    <ul class="project-details">
+                        <li>5 MP PoE dome camera to Frigate (dual RTSP: low-res for detection, full-res H.265 for recording); camera denied outbound internet at firewall.</li>
+                        <li>Tiered retention: all footage 3 days, motion events 7 days, person alerts 14 days.</li>
+                        <li>Frigate + Home Assistant UI reverse-proxied through Caddy with Let's Encrypt; restricted to LAN + Wireguard VPN.</li>
+                    </ul>
                 </div>
                 <div class="project-card">
                     <h3>Facility AV Broadcast Migration - Satellite to Terrestrial ATSC</h3>
-                    <p>Migrated facility AV from Dish Network satellite to terrestrial ATSC 1.0/3.0 OTA reception. Outdoor VHF/UHF antenna feeds an Antronix powered splitter (built-in amplification, high-pass filter rejecting sub-TV-band noise, multi-port distribution to 5 endpoints). Replaced legacy RG59 with quad-shielded RG6 (solid copper core) - quad shielding rejects EMI/RFI from manufacturing equipment, solid copper preserves DC pass-through powering the splitter via coax. Antronix splitter powered via UPS-fed coaxial injector - amplification stays online through power flickers and brownouts. Doubled coverage from 2 to 5 TVs while eliminating ~$1,320/year in subscription + rebroadcast fees.</p>
+                    <p>Doubled TV coverage (2 to 5 endpoints) and eliminated ~$1,320/year in subscription + rebroadcast fees.</p>
+                    <ul class="project-details">
+                        <li>Outdoor VHF/UHF antenna to Antronix powered splitter (built-in amp, high-pass filter); quad-shielded RG6 for EMI/RFI rejection from manufacturing equipment.</li>
+                        <li>Splitter powered via UPS-fed coaxial injector - amplification stays online through power flickers.</li>
+                    </ul>
                 </div>
                 <div class="project-card">
                     <h3>Media Workflow Optimization</h3>
-                    <p>Cut video archive storage ~40% with no visible quality loss through custom 10-bit encoding (to minimize color banding): HEVC via x265 (very slow preset) and NVIDIA NVENC (faster, still on its slowest preset), plus AV1 via SVT-AV1 in software since the GPU has no AV1 hardware encoder, run in Handbrake with some direct ffmpeg.</p>
+                    <p>Cut video archive storage ~40% with no visible quality loss through custom 10-bit encoding.</p>
+                    <ul class="project-details">
+                        <li>HEVC via x265 (very slow) + NVENC; AV1 via SVT-AV1 (software, no GPU AV1 encoder).</li>
+                        <li>Run in Handbrake with some direct ffmpeg; minimizes color banding.</li>
+                    </ul>
                 </div>
             </div>
         </section>
