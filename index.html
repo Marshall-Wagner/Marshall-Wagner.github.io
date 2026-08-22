@@ -90,8 +90,12 @@
                     <p>Endpoint protection, fail2ban intrusion prevention, Nmap, domain blacklisting/whitelisting, AdGuard Home DNS filtering, DNSSEC validation, DoH/DoT encrypted DNS, CSRF mitigation, self-hosted video surveillance / NVR (Frigate, local AI object detection), Linux kernel-module hardening (attack-surface reduction)</p>
                 </div>
                 <div class="skill-card">
-                    <h3>Scripting &amp; Dev</h3>
-                    <p>Python, PowerShell, batch, Bash/CLI, HTML/CSS, Git/GitHub; C and ARM assembly (coursework)</p>
+                    <h3>Software Development</h3>
+                    <p>Kotlin (Android / Jetpack Compose), C and ARM assembly (coursework), HTML/CSS, Git/GitHub</p>
+                </div>
+                <div class="skill-card">
+                    <h3>Scripting &amp; Automation</h3>
+                    <p>Python, PowerShell, batch, Bash/CLI</p>
                 </div>
                 <div class="skill-card">
                     <h3>Multimedia</h3>
@@ -284,6 +288,10 @@
                 <div class="project-card">
                     <h3>Self-Hosted Video Surveillance with AI Person Detection</h3>
                     <p>Deployed a self-hosted NVR for after-hours monitoring of the WW Machining office: a 5 MP PoE dome camera feeding Frigate for AI person detection with 24/7 continuous recording. The camera is powered over PoE by a repurposed 802.3af/at injector reused from a retired 5G modem rather than new hardware, and secured with a randomly generated 20-character LUDS password to resist brute-force attacks. Frigate pulls two RTSP streams from the camera: a low-resolution H.264 sub-stream (640x480 at 5 fps) for detection and the full-resolution H.265 main stream (2560x1920 at 25 fps) for recording. The camera ships RTSP and ONVIF disabled by default (only its proprietary app port exposed), so both were enabled, and HTTPS was enabled on the camera with a self-signed certificate for the Home Assistant integration. Recording is 24/7 continuous as a safety net so nothing is missed if a detection does not trigger; retention is tiered - all footage is kept 3 days, motion-detection events 7 days, and person-detection alerts 14 days. Frigate is also capped to 4 CPU threads so its detection workload doesn&rsquo;t starve the other self-hosted services sharing the server. Frigate records the camera&rsquo;s native H.265 stream directly to disk without re-encoding, with live and event recordings, snapshots, and clips written to a dedicated data SSD separate from the OS drive. The camera is denied outbound internet access at the X-Wrt firewall (its WAN-bound traffic is rejected), so it cannot phone home and Frigate pulls the stream entirely on the LAN. The Frigate web UI is reverse-proxied through Caddy with a real Let&rsquo;s Encrypt TLS certificate and restricted to the LAN and Wireguard VPN, and Home Assistant provides a live camera dashboard and camera firmware-update monitoring (patch-hygiene visibility). The Home Assistant UI is hardened the same way as the rest of the stack: reverse-proxied through Caddy with a Let&rsquo;s Encrypt certificate, restricted to the LAN and Wireguard VPN with remote access disabled, and protected by a 64-character LUDS password. The result is self-hosted video surveillance with 24/7 recording, AI person detection, and tiered retention - no cloud or subscription dependency.</p>
+                </div>
+                <div class="project-card">
+                    <h3>Basic Apps - Privacy-First Offline Android Suite</h3>
+                    <p>Designed and built a suite of eight minimal, fully-offline Android apps - phone, SMS, keyboard, camera, contacts, calendar, clock, and a zero-permission system monitor - in Kotlin and Jetpack Compose. Privacy is enforced by architecture: none of the apps hold the INTERNET permission, so nothing dialed, typed, photographed, or received can leave the device. Built on a modern Android stack (Jetpack Compose UI, Coroutines/Flow, Room, Paging 3, CameraX, Material 3) supporting Android 8 through 15, with version-guarded APIs, R8-optimized signed release builds, and testing across multiple physical devices. Documented (README + build guide), GPL v3, released as v1.0. <a href="https://github.com/Marshall-Wagner/basic-apps">github.com/Marshall-Wagner/basic-apps</a></p>
                 </div>
                 <div class="project-card">
                     <h3>Facility AV Broadcast Migration - Satellite to Terrestrial ATSC</h3>
