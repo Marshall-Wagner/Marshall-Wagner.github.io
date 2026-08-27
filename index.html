@@ -210,7 +210,7 @@
                     <li>Extended the Prometheus/Grafana stack with SNMP monitoring via snmp_exporter, polling the router's per-interface throughput (64-bit counters over SNMPv2c) for single-pane visibility from host services down to the network layer.</li>
                     <li>Manage firewall policy, domain blacklisting/whitelisting, and endpoint protection across all org devices.</li>
                     <li>Scheduled backup discipline: weekly Timeshift snapshots on Linux servers; configuration exports for X-Wrt router and managed switch for rapid restore in emergencies.</li>
-                    <li>Migrating server storage from NTFS/ext4 to BTRFS for checksummed data integrity: end-to-end checksums and scheduled scrubs surface silent bit rot instead of returning corrupted data undetected, with redundant (DUP) metadata for self-healing filesystem metadata, zstd transparent compression to reduce on-disk footprint, and backups as the data-recovery path.</li>
+                    <li>Matched storage filesystems to each workload on the server: migrated the bulk HDDs from NTFS to BTRFS for checksummed data integrity (end-to-end checksums and scheduled scrubs surface silent bit rot instead of returning corrupted data undetected; DUP metadata self-heals filesystem metadata; backups remain the recovery path), and kept the SSDs on ext4 for its maturity and stronger small-file performance.</li>
                 </ul>
 
                 <h4 class="job-group">Support &amp; Hardware</h4>
