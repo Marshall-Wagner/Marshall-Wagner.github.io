@@ -154,6 +154,15 @@ body {
     background: #c45f08;
 }
 
+.github-btn {
+    background: #24292f;
+    margin-left: 0.75rem;
+}
+
+.github-btn:hover {
+    background: #1b1f23;
+}
+
 /* ===== Navbar ===== */
 .navbar {
     background: var(--card);
